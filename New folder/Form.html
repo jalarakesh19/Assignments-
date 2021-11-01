@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Register Form</title>
+   <!-- css-->
+   <link rel="stylesheet" href="css/styles.css">
+   <!-- js-->
+   <script src="javascript/javascript.js"></script>
+
+</head>
+<body>
+      <form action="C:\Users\jalar\Desktop\New folder\success.html" method="post">
+         <div class="container">
+            <div class="header">
+               <h1><span class="fontcolor">Registeration Form</span></h1>
+
+               <label for="fname"><span class="fontcolor">First Name</span></label><br>
+                  <input type="text" name="fname" id="fname" required><br>
+               
+               <label for="lname"><span class="fontcolor">Last Name</span></label><br>
+                  <input type="text" name="lname" id="lname" required><br>
+               
+               <span class="fontcolor">Gender :</span><br>
+                  <input type="radio" name="gender" id="male" required>
+               <label for="male"><span class="fontcolor" >Male</span></label>
+                  <input type="radio" name="gender" id="female" required>   
+               <label for="female"><span class="fontcolor">Female</span></label>
+                  <input type="radio" name="gender" id="other">   
+               <label for="other"><span class="fontcolor">Others</span></label><br><br>
+               
+               <label for="mail"><span class="fontcolor">E-mail</span></label><br>
+                  <input type="email" name="mail" id="mail" onkeypress="checkEmail()" onkeyup="checkEmail()" required><br>
+                  <p id='mail_name'></p>
+               
+               <label for="pwd"><span class="fontcolor">Password</span></label><br>
+                  <input type="Password" name="pwd" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and special character, and at least 8 or more characters" required><br>
+               
+               <label for="rpwd"><span class="fontcolor">Confirm password</span></span></label><br>
+                  <input type="Password" name="rpwd" id="rpwd" onkeypress="check()" onkeyup="check()"  required><br>
+                  <p id='msg' class='msg'></p>
+               
+               <label for="num"><span class="fontcolor">Mobile Number</span></label><br>
+                  <input type="tel" name="phone_number" id="phone_number" pattern="^\d{10}$" title="Please enter valid number" required><br>
+            </div>
+            
+            <div class="footer">   
+               <input type="submit" class="btn" value="submit"><!--<span class="btn_name">Register</span>-->
+            </div>
+
+         </div>
+      </form>
+</body>
+</html>
